@@ -28,7 +28,7 @@ export const Contact = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          access_key: "e251aa05-3900-410d-a0cf-a5573d21b329", // Replace with your Web3Forms access key
+          access_key: "e251aa05-3900-410d-a0cf-a5573d21b329", 
           ...formData,
         }),
       });

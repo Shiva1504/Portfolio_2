@@ -5,49 +5,66 @@ import { useState } from "react";
 
 const projects = [
   {
-    title: "AI-Powered Analytics Platform",
-    description: "Predictive analytics solution using machine learning algorithms",
-    tech: "Python, TensorFlow, React",
+    title: "DeepFake Detection",
+    description: "Detecting manipulated images using machine learning algorithms",
+    tech: "Python, Deep Learning Algorithms, TensorFlow, CNN",
     image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=500&q=60",
-    longDescription: "A comprehensive analytics platform that leverages machine learning algorithms to provide predictive insights. Features include data visualization, automated reporting, and real-time analytics processing. The system uses TensorFlow for ML models and React for the frontend dashboard.",
+    longDescription: "Designed and developed a deepfake detection system based on the principles of machine learning algorithms for detecting manipulated images as concerns with deepfakes increased. Implemented CNN architecture achieving 99% accuracy.",
     features: [
-      "Real-time data processing",
+      "Real-time image processing",
       "Interactive dashboards",
       "Automated ML model training",
-      "Custom report generation"
+      "deep learning architecture"
     ],
-    demoUrl: "https://demo.example.com",
-    githubUrl: "https://github.com/example/project"
+    demoUrl: "",
+    githubUrl: ""
   },
   {
-    title: "Smart Portfolio Manager",
-    description: "Automated portfolio management system with ML insights",
-    tech: "PyTorch, Node.js, MongoDB",
+    title: "Employee Assistance System",
+    description: "Employee Assistance System is an AI-driven support for employees across various business functions",
+    tech: "React, TypeScript, vite.js, Speech recognition and AI/ML services, Tailwind CSS",
+    image: "public/images/AI3_Pic1.png",
+    longDescription: "The Employee Assistance System is an AI-powered platform designed to enhance productivity and streamline communication within organizations. It features AI-driven task automation, speech recognition, multilingual support, and real-time collaboration tools. With functionalities like task management, announcements, and quick actions, the system helps employees stay organized and efficient. Built with React, TypeScript, and Tailwind CSS, it provides a user-friendly interface and integrates advanced machine learning algorithms to improve workplace efficiency.",
+    features: [
+      "AI-Powered Chatbot",
+      "Employee Feedback System",
+      "Speech recognition and AI/ML services integrated via custom",
+      "Task Management"
+    ],
+    demoUrl: "https://github.com/Shiva1504/Employee_Assistance_System/blob/main/README.md",
+    githubUrl: "https://github.com/Shiva1504/Employee_Assistance_System"
+  },
+  {
+    title: "WEB APPLICATION USING DJANGO",
+    description: "Designed an entire web application with Django",
+    tech: "HTML, CSS, JavaScript, Django, Python, SQLite, Bootstrap",
+    // image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=500&q=60",
+    image: "public/images/Port_Pic2.png",
+    longDescription: "This project is a complete web application developed using Django, with a focus on user authentication and security. The application features user login with enhanced security measures, OTP-based password reset for easy account recovery, and seamless data handling for efficient backend processing. Additionally, email integration allows for user notifications and password reset confirmations. The web interface is responsive and user-friendly, built using HTML, CSS, and JavaScript, while the backend is powered by Django, Python, and SQLite for database management. Bootstrap was utilized to create a clean and modern UI design.",
+    features: [
+      "User Authentication",
+      "OTP-Based Password Reset",
+      "Data Handling",
+      "Email Integration"
+    ],
+    demoUrl: "https://github.com/Shiva1504/Web-Application-Using-DJANGO",
+    githubUrl: "https://github.com/Shiva1504/Web-Application-Using-DJANGO"
+  },
+  {
+    title: "PREDICTION MODELS AND ANALYSIS",
+    description: "PREDICTION MODELS AND ANALYSIS OF REAL-WORLD APPLICATIONS",
+    tech: "Python, Machine Learning & Deep Learning Algorithms, Regression Models",
     image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=500&q=60",
-    longDescription: "An intelligent portfolio management system that provides ML-driven insights for investment decisions. The platform analyzes market trends, predicts potential risks, and suggests portfolio optimizations.",
+    longDescription: "• Developed a variety of prediction models to solve various problems in health care, finance, education, and retailing.The model above gave high precision because these techniques of data preprocessing, feature engineering, and machine learning algorithms such as logistic regression, decision trees, and neural networks were used.",
     features: [
-      "Portfolio performance tracking",
-      "Risk assessment",
-      "Market trend analysis",
-      "Automated rebalancing suggestions"
+      "Cancer Prediction Model",
+      "Chance of Admission Model",
+      "CreditCard Prediction Model",
+      "Fish Weight Prediction Model",
+      "Purchase Prediction Model"
     ],
-    demoUrl: "https://demo.example.com",
-    githubUrl: "https://github.com/example/project"
-  },
-  {
-    title: "Intelligent Customer Service",
-    description: "NLP-based customer service automation platform",
-    tech: "BERT, FastAPI, React",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=500&q=60",
-    longDescription: "A customer service automation platform powered by Natural Language Processing. Uses BERT for understanding customer queries and automatically routes or responds to inquiries based on content analysis.",
-    features: [
-      "Automated query classification",
-      "Smart routing system",
-      "Response suggestion",
-      "Performance analytics"
-    ],
-    demoUrl: "https://demo.example.com",
-    githubUrl: "https://github.com/example/project"
+    demoUrl: "https://github.com/Shiva1504/AL_ML-PROJECTS",
+    githubUrl: "https://github.com/Shiva1504/AL_ML-PROJECTS"
   }
 ];
 
@@ -64,7 +81,7 @@ export const Projects = () => {
             className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
             onClick={() => setSelectedProject(project)}
           >
-            <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
+            <img src={project.image} alt={project.title} className="w-full h-auto object-cover" />
             <CardHeader>
               <CardTitle>{project.title}</CardTitle>
               <CardDescription>{project.tech}</CardDescription>
@@ -89,7 +106,7 @@ export const Projects = () => {
               <img 
                 src={selectedProject.image} 
                 alt={selectedProject.title} 
-                className="w-full h-64 object-cover rounded-lg"
+                className="w-full h-auto object-cover rounded-lg"
               />
               <p className="text-muted-foreground">
                 {selectedProject.longDescription}

@@ -27,10 +27,10 @@ export const Navbar = () => {
   ];
 
   const contactDetails = [
-    { icon: <User className="h-4 w-4" />, label: "John Doe", value: "AI/ML Developer" },
-    { icon: <Mail className="h-4 w-4" />, label: "Email", value: "john.doe@example.com", href: "mailto:john.doe@example.com" },
-    { icon: <Github className="h-4 w-4" />, label: "GitHub", value: "@johndoe", href: "https://github.com/johndoe" },
-    { icon: <Linkedin className="h-4 w-4" />, label: "LinkedIn", value: "John Doe", href: "https://linkedin.com/in/johndoe" },
+    { icon: <User className="h-4 w-4" />, label: "DASARI SAMBASIVA NAIDU", value: "AI/ML & Web Developer" },
+    { icon: <Mail className="h-4 w-4" />, label: "Email", value: "dasarisambasivanaidu7@gmail.com", href: "mailto:dasarisambasivanaidu7@gmail.com" },
+    { icon: <Github className="h-4 w-4" />, label: "GitHub", value: "@Shiva1504", href: "https://github.com/Shiva1504" },
+    { icon: <Linkedin className="h-4 w-4" />, label: "LinkedIn", value: "Dasari Sambasiva Naidu", href: "https://linkedin.com/in/dasarisambasivanaidu" },
   ];
 
   return (
@@ -43,7 +43,7 @@ export const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <h1 className="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Portfolio
+            Portfolio
             </h1>
           </div>
 
