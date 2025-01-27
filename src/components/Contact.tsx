@@ -92,7 +92,7 @@ export const Contact = () => {
               required
             />
           </div>
-          <Button type="submit" className="w-full" disabled={isSubmitting}>
+          <Button type="submit" className="w-full font-bold bg-gradient-to-r from-primary to-secondary" disabled={isSubmitting}>
             {isSubmitting ? "Sending..." : "Send Message"}
           </Button>
         </form>

@@ -17,8 +17,8 @@ export const Hero = () => {
         <p className="text-xl md:text-2xl text-muted-foreground mb-8">
           Transforming ideas into intelligent solutions through AI/ML and modern web development
         </p>
-        <Button className="text-lg px-8 py-6" size="lg">
-          View Projects <ArrowRight className="ml-2" />
+        <Button className="text-lg px-8 py-6 font-bold bg-gradient-to-r from-primary to-secondary" size="lg">
+          Download Resume <ArrowRight className="ml-2" />
         </Button>
       </motion.div>
     </section>

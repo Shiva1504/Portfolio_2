@@ -60,7 +60,7 @@ export const Navbar = () => {
             ))}
             <Popover>
               <PopoverTrigger asChild>
-                <Button>Contact Me</Button>
+                <Button className="font-bold bg-gradient-to-r from-primary to-secondary">Contact Me</Button>
               </PopoverTrigger>
               <PopoverContent className="w-80">
                 <div className="space-y-4">
@@ -118,7 +118,7 @@ export const Navbar = () => {
               <div className="px-4">
                 <Popover>
                   <PopoverTrigger asChild>
-                    <Button className="w-full">Contact Me</Button>
+                    <Button className="w-full font-bold bg-gradient-to-r from-primary to-secondary">Contact Me</Button>
                   </PopoverTrigger>
                   <PopoverContent className="w-80">
                     <div className="space-y-4">
