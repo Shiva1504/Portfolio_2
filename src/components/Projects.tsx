@@ -31,7 +31,7 @@ const projects = [
       "Speech recognition and AI/ML services integrated via custom",
       "Task Management"
     ],
-    demoUrl: "https://github.com/Shiva1504/Employee_Assistance_System/blob/main/README.md",
+    demoUrl: "https://shiva1504.github.io/Employee_Assistance_System/",
     githubUrl: "https://github.com/Shiva1504/Employee_Assistance_System"
   },
   {
@@ -47,7 +47,7 @@ const projects = [
       "Data Handling",
       "Email Integration"
     ],
-    demoUrl: "https://github.com/Shiva1504/Web-Application-Using-DJANGO",
+    demoUrl: "https://shiva1504.github.io/Web-Application-Using-DJANGO/",
     githubUrl: "https://github.com/Shiva1504/Web-Application-Using-DJANGO"
   },
   {
