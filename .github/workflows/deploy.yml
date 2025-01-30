@@ -6,8 +6,10 @@ on:
       - main
 
 permissions:
-  contents: write  
-
+  contents: write
+  pages: write  # Add this
+  id-token: write  # Add this
+ 
 jobs:
   build:
     name: Build Project
@@ -29,11 +31,6 @@ jobs:
       - name: Build project
         run: |
           npm run build
-          # Add CNAME if using custom domain
-          # echo "yourdomain.com" > dist/CNAME
-          
-          # Client-side routing fix
-          cp dist/index.html dist/404.html
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
@@ -45,7 +42,6 @@ jobs:
     name: Deploy to GH Pages
     needs: build
     runs-on: ubuntu-22.04
-    environment: github-pages
 
     steps:
       - name: Download artifact
@@ -58,8 +54,8 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages 
           publish_dir: ./dist
-          # Forcefully update deployment history
           force_orphan: true
           enable_jekyll: false 
           keep_files: false
