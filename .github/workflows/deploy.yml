@@ -5,47 +5,54 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write  
+
 jobs:
   build:
-    name: Build
-    runs-on: ubuntu-22.04  # Explicit Ubuntu version
+    name: Build Project
+    runs-on: ubuntu-22.04
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4  # Updated to v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4  # Updated to v4
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
         with:
-          node-version: 18  # Explicit Node.js version
+          node-version: 20
+          cache: 'npm'
 
       - name: Install dependencies
-        uses: bahmutov/npm-install@v1
+        run: npm ci
 
       - name: Build project
         run: |
           npm run build
-          # Create 404.html for client-side routing
+          # Add CNAME if using custom domain
+          # echo "yourdomain.com" > dist/CNAME
+          
+          # Client-side routing fix
           cp dist/index.html dist/404.html
 
-      - name: Upload production-ready build files
-        uses: actions/upload-artifact@v4  # Updated to v4
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
         with:
-          name: production-files
-          path: ./dist
+          name: production-build
+          path: dist/
 
   deploy:
-    name: Deploy
+    name: Deploy to GH Pages
     needs: build
-    runs-on: ubuntu-22.04  # Explicit Ubuntu version
-    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-22.04
+    environment: github-pages
 
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v4  # Updated to v4
+        uses: actions/download-artifact@v4
         with:
-          name: production-files
-          path: ./dist
+          name: production-build
+          path: dist/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
@@ -54,3 +61,5 @@ jobs:
           publish_dir: ./dist
           # Forcefully update deployment history
           force_orphan: true
+          enable_jekyll: false 
+          keep_files: false
