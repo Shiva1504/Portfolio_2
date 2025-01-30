@@ -23,7 +23,7 @@ const projects = [
     title: "Employee Assistance System",
     description: "Employee Assistance System is an AI-driven support for employees across various business functions",
     tech: "React, TypeScript, vite.js, Speech recognition and AI/ML services, Tailwind CSS",
-    image: "public/images/AI3_Pic1.png",
+    image: "../public/images/AI3_Pic1.png",
     longDescription: "The Employee Assistance System is an AI-powered platform designed to enhance productivity and streamline communication within organizations. It features AI-driven task automation, speech recognition, multilingual support, and real-time collaboration tools. With functionalities like task management, announcements, and quick actions, the system helps employees stay organized and efficient. Built with React, TypeScript, and Tailwind CSS, it provides a user-friendly interface and integrates advanced machine learning algorithms to improve workplace efficiency.",
     features: [
       "AI-Powered Chatbot",
@@ -39,7 +39,7 @@ const projects = [
     description: "Designed an entire web application with Django that included features like: User Authentication, OTP-Based Password Reset, Data Handling, Email Integration. Successfully developed a secure and user-friendly login system with enhanced security measures.",
     tech: "HTML, CSS, JavaScript, Django, Python, SQLite, Bootstrap",
     // image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=500&q=60",
-    image: "public/images/Port_Pic2.png",
+    image: "./public/images/Port_Pic2.png",
     longDescription: "This project is a complete web application developed using Django, with a focus on user authentication and security. The application features user login with enhanced security measures, OTP-based password reset for easy account recovery, and seamless data handling for efficient backend processing. Additionally, email integration allows for user notifications and password reset confirmations. The web interface is responsive and user-friendly, built using HTML, CSS, and JavaScript, while the backend is powered by Django, Python, and SQLite for database management. Bootstrap was utilized to create a clean and modern UI design.",
     features: [
       "User Authentication",
