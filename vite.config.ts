@@ -13,7 +13,9 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: "/Portfolio_2/", // Keep this for GitHub Pages subpath
+    base: process.env.NODE_ENV === 'production' 
+  ? '/Portfolio_2/' 
+  : '/',
   build: {
     outDir: "dist", // Explicit output directory
     emptyOutDir: true, // Clear directory before build
